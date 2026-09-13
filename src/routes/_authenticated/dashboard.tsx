@@ -32,7 +32,7 @@ function Dashboard() {
   const { data: links, isLoading } = useQuery({ queryKey: ["links"], queryFn: () => list({}) });
 
   const createMut = useMutation({
-    mutationFn: (vars: { url: string; alias?: string }) => create({ data: vars }),
+    mutationFn: (vars: { url: string; alias?: string | undefined }) => create({ data: vars }),
     onSuccess: (row) => {
       setUrl("");
       setAlias("");
