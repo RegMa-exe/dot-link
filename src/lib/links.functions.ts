@@ -41,7 +41,9 @@ const createSchema = z.object({
 
 export const createLink = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .inputValidator((data: { url: string; alias?: string; title?: string }) => createSchema.parse(data))
+  .inputValidator((data: { url: string; alias?: string | undefined; title?: string | undefined }) =>
+    createSchema.parse(data),
+  )
   .handler(async ({ data, context }) => {
     const { supabase, userId } = context;
 
