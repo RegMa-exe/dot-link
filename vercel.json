@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/~oauth/:path*",
+      "destination": "https://id-preview-11f823f5--11922c0e-5a6f-4f7c-a3c8-13fdf257a936.lovable.app/~oauth/:path*",
+      "permanent": false
+    }
+  ]
+}
