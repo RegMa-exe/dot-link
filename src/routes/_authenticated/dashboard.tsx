@@ -14,6 +14,8 @@ export const Route = createFileRoute("/_authenticated/dashboard")({
       { name: "description", content: "Every short link you own, with clicks, visitors and sources." },
       { property: "og:title", content: "Your links — Dotlink" },
       { property: "og:description", content: "Every short link you own, with clicks, visitors and sources." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Dashboard,

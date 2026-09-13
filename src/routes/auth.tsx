@@ -14,6 +14,8 @@ export const Route = createFileRoute("/auth")({
       { name: "description", content: "Sign in to create short links and track every click." },
       { property: "og:title", content: "Sign in — Dotlink" },
       { property: "og:description", content: "Sign in to create short links and track every click." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AuthPage,

@@ -21,6 +21,8 @@ export const Route = createFileRoute("/_authenticated/link/$id")({
       { name: "description", content: "Clicks, unique visitors, referrers, devices and countries for a short link." },
       { property: "og:title", content: "Link analytics — Dotlink" },
       { property: "og:description", content: "Clicks, unique visitors, referrers, devices and countries." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: LinkAnalytics,
